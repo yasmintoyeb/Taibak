@@ -104,6 +104,104 @@ nav a:hover {
     margin-left: 8px
 }
 
+.language-picker {
+    position: relative;
+    flex-shrink: 0
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 38px;
+    padding: 7px 9px;
+    border: 1px solid #dce5ef;
+    border-radius: 7px;
+    background: #fff;
+    color: #123f79;
+    font: 700 12px "Kantumruy Pro", Inter, sans-serif;
+    cursor: pointer
+}
+
+.language-toggle:hover,
+.language-toggle[aria-expanded="true"] {
+    border-color: #b9c9dc;
+    background: #f7f9fc
+}
+
+.language-arrow {
+    font-size: 13px
+}
+
+.language-flag {
+    width: 24px;
+    height: 16px;
+    object-fit: contain
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 145px;
+    padding: 8px;
+    border: 2px solid #123f79;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 30px #102f5521;
+    gap: 6px;
+    z-index: 30
+}
+
+.language-menu.open {
+    display: grid
+}
+
+.language-menu button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #c8d5e4;
+    border-radius: 6px;
+    background: transparent;
+    color: #365169;
+    padding: 8px 10px;
+    text-align: start;
+    font: 600 13px "Kantumruy Pro", Inter, sans-serif;
+    cursor: pointer
+}
+
+.language-menu button img {
+    width: 24px;
+    height: 16px;
+    object-fit: contain;
+    flex-shrink: 0
+}
+
+.language-menu button:hover,
+.language-menu button:focus-visible {
+    background: #eef4fb;
+    color: #123f79
+}
+
+#googleTranslateWidget {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0)
+}
+
+.goog-te-banner-frame,
+.skiptranslate iframe {
+    display: none !important
+}
+
+body {
+    top: 0 !important
+}
+
 .menu-toggle {
     display: none;
     border: 0;
@@ -173,31 +271,8 @@ nav a:hover {
     color: #c18c28
 }
 
-.hero-title-letter {
-    display: inline-block
-}
-
-.hero h1.is-letter-animating .hero-title-letter {
-    animation: hero-title-letter 360ms ease-out both;
-    animation-delay: var(--letter-delay)
-}
-
-@keyframes hero-title-letter {
-    35% {
-        color: #e0a832;
-        transform: translateY(-7px);
-        text-shadow: 0 8px 18px #c18c2833
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hero h1.is-letter-animating .hero-title-letter {
-        animation: none
-    }
-}
-
 .hero-copy>p {
-    font-size: 16px;
+    font-size: 18px;
     color: #62748a;
     max-width: 540px;
     line-height: 2;
@@ -218,7 +293,7 @@ nav a:hover {
     padding: 12px 21px;
     border-radius: 7px;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 14px;
     transition: .2s
 }
 
@@ -431,7 +506,7 @@ nav a:hover {
     width: 330px;
     height: 330px;
     border: 1px solid #c6d8ea;
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 .about-image:after {
@@ -440,10 +515,10 @@ nav a:hover {
 }
 
 .about-image img {
-    border-radius: 50%;
     width: 270px;
     height: 270px;
     object-fit: cover;
+    border-radius: 50%;
     z-index: 1;
     filter: drop-shadow(0 15px 20px #123f7920)
 }
@@ -1032,6 +1107,21 @@ footer {
         display: flex
     }
 
+    .language-picker {
+        margin: 8px 0
+    }
+
+    .language-toggle {
+        width: 100%;
+        justify-content: center
+    }
+
+    .language-menu {
+        left: 0;
+        right: 0;
+        width: 100%
+    }
+
     nav a {
         padding: 11px 4px;
         font-size: 13px;
@@ -1113,7 +1203,8 @@ footer {
     }
 
     .about-image img {
-        width: 220px
+        width: 220px;
+        height: 220px
     }
 
     .about-content h3 {
@@ -1213,5 +1304,69 @@ footer {
 
     .coming {
         display: none
+    }
+}
+
+/* Larger readable body copy */
+body {
+    font-size: 16px
+}
+
+.section-heading p,
+.hero-copy>p,
+.about-content>p,
+.trust-grid p,
+.involve-grid>div>p {
+    font-size: 16px
+}
+
+.principles small,
+.program-card p,
+.support-points,
+.donation-card>p,
+.contact-line small,
+.report-item small,
+.donation-placeholder small,
+.safe-note,
+.map-placeholder small {
+    font-size: 13px
+}
+
+.principles b,
+.program-card>a,
+.report-item b,
+.contact-line b,
+.hero-note b,
+.floating-card b {
+    font-size: 14px
+}
+
+.hero-note small,
+.floating-card small,
+.coming,
+.footer-inner>p,
+.footer-inner>small {
+    font-size: 12px
+}
+
+@media(max-width:760px) {
+    .hero-copy>p,
+    .section-heading p,
+    .about-content>p,
+    .trust-grid p,
+    .involve-grid>div>p {
+        font-size: 16px
+    }
+
+    .principles small,
+    .program-card p,
+    .support-points,
+    .donation-card>p,
+    .contact-line small,
+    .report-item small,
+    .donation-placeholder small,
+    .safe-note,
+    .map-placeholder small {
+        font-size: 13px
     }
 }
