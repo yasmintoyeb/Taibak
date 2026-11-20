@@ -31,11 +31,15 @@
         <a href="#reports">របាយការណ៍</a>
         <a href="#involved">ចូលរួម</a>
         <a href="#contact">ទំនាក់ទំនង</a>
+        <div class="nav-account-actions">
+          <a class="nav-signin" href="account.html#signin">Sign in</a>
+          <a class="nav-signup" href="account.html#signup">Sign up</a>
+        </div>
         <div class="language-picker">
           <button class="language-toggle" id="languageToggle" type="button" aria-expanded="false" aria-haspopup="true">
             <img class="language-flag" id="languageFlag" src="assets/flag-kh.svg" alt="" aria-hidden="true">
             <span id="languageLabel">ខ្មែរ</span>
-            <span class="language-arrow" aria-hidden="true">⌄</span>
+            <span class="language-arrow" aria-hidden="true"></span>
           </button>
           <div class="language-menu" id="languageMenu" role="menu" aria-label="ជ្រើសរើសភាសា">
             <button type="button" role="menuitem" data-language="km" lang="km"><img src="assets/flag-kh.svg" alt=""
@@ -74,37 +78,16 @@
         <div class="hero-visual">
           <div class="visual-ring"></div>
           <div class="people-orbit" aria-hidden="true">
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
-            <div class="orbit-person"><img
-                src="./assets/yasmin.JPG"
-                alt=""></div>
+            <div class="orbit-person" id="one"><div class="orbit-person-content"><img src="./assets/yasmin.JPG" alt=""></div></div>
+            <div class="orbit-person"><div class="orbit-person-content" id="two"><img src="./assets/yasmin.JPG" alt=""><p>ប្រធាន</p></div></div>
+            <div class="orbit-person"><div class="orbit-person-content"><img src="./assets/yasmin.JPG" alt=""></div></div>
+            <div class="orbit-person"><div class="orbit-person-content"><img src="./assets/yasmin.JPG" alt=""></div></div>
+            <div class="orbit-person"><div class="orbit-person-content"><img src="./assets/yasmin.JPG" alt=""></div></div>
+            <div class="orbit-person"><div class="orbit-person-content"><img src="./assets/yasmin.JPG" alt=""></div></div>
           </div>
           <div class="logo-card"><img src="assets/tcac-logo.png" alt="TCAC logo"></div>
           <div class="floating-card"><span
-              class="float-icon">♡</span><span><b>ចែករំលែកក្តីស្រឡាញ់</b><small>ផ្តល់ក្តីសង្ឃឹមដល់សហគមន៍</small></span>
+              class="float-icon">❤️</span><span><b>ចែករំលែកក្តីស្រឡាញ់</b><small>ផ្តល់ក្តីសង្ឃឹមដល់សហគមន៍</small></span>
           </div>
           <div class="visual-caption">TAIBA CHARITY ASSOCIATION OF CAMBODIA</div>
         </div>
@@ -175,6 +158,44 @@
               <figcaption>ការគាំទ្រការអប់រំ</figcaption>
             </figure>
           </div>
+          <div class="activity-video-heading">
+            <h4>វីដេអូសកម្មភាព</h4>
+            <span>ទស្សនាសកម្មភាពរបស់យើង</span>
+          </div>
+          <div class="activity-video-grid">
+            <figure class="activity-video-card">
+              <video controls preload="metadata" poster="assets/activity-volunteer.jpg"
+                aria-label="វីដេអូសកម្មភាពទី ១">
+                <source src="videos/my-video.mp4" type="video/mp4">
+                កម្មវិធីរុករករបស់អ្នកមិនគាំទ្រការចាក់វីដេអូទេ។
+              </video>
+              <figcaption>វីដេអូសកម្មភាពទី ១</figcaption>
+            </figure>
+            <figure class="activity-video-card">
+              <video controls preload="metadata" poster="assets/activity-community.jpg"
+                aria-label="វីដេអូសកម្មភាពទី ២">
+                <source src="videos/my-video.mp4" type="video/mp4">
+                កម្មវិធីរុករករបស់អ្នកមិនគាំទ្រការចាក់វីដេអូទេ។
+              </video>
+              <figcaption>វីដេអូសកម្មភាពទី ២</figcaption>
+            </figure>
+            <figure class="activity-video-card">
+              <video controls preload="metadata" poster="assets/activity-support.jpg"
+                aria-label="វីដេអូសកម្មភាពទី ៣">
+                <source src="videos/my-video.mp4" type="video/mp4">
+                កម្មវិធីរុករករបស់អ្នកមិនគាំទ្រការចាក់វីដេអូទេ។
+              </video>
+              <figcaption>វីដេអូសកម្មភាពទី ៣</figcaption>
+            </figure>
+            <figure class="activity-video-card">
+              <video controls preload="metadata" poster="assets/activity-learning.jpg"
+                aria-label="វីដេអូសកម្មភាពទី ៤">
+                <source src="videos/my-video.mp4" type="video/mp4">
+                កម្មវិធីរុករករបស់អ្នកមិនគាំទ្រការចាក់វីដេអូទេ។
+              </video>
+              <figcaption>វីដេអូសកម្មភាពទី ៤</figcaption>
+            </figure>
+          </div>
         </div>
         <div class="program-grid">
           <article class="program-card">
@@ -186,7 +207,7 @@
               <li>គាំទ្រកុមារ និងយុវជន</li>
               <li>លើកកម្ពស់ឱកាសរៀនសូត្រ</li>
             </ul>
-            <a href="#contact">ស្វែងយល់បន្ថែម
+            <a href="program-details.html#education-details">ស្វែងយល់បន្ថែម
               <b>→</b></a>
           </article>
           <article class="program-card">
@@ -198,7 +219,7 @@
               <li>គាំទ្រគ្រួសារដែលជួបការលំបាក</li>
               <li>លើកទឹកចិត្តការចូលរួមរបស់សហគមន៍</li>
             </ul>
-            <a href="#contact">ស្វែងយល់បន្ថែម
+            <a href="program-details.html#charity-details">ស្វែងយល់បន្ថែម
               <b>→</b></a>
           </article>
           <article class="program-card">
@@ -210,7 +231,7 @@
               <li>លើកកម្ពស់សុខុមាលភាព</li>
               <li>គាំទ្រគ្រួសារក្នុងសហគមន៍</li>
             </ul>
-            <a href="#contact">ស្វែងយល់បន្ថែម <b>→</b></a>
+            <a href="program-details.html#social-care-details">ស្វែងយល់បន្ថែម <b>→</b></a>
           </article>
           <article class="program-card">
             <div class="program-icon rose">✚</div><span class="program-no">04 / HUMANITARIAN</span>
@@ -221,7 +242,7 @@
               <li>ចែករំលែកសម្ភារៈចាំបាច់</li>
               <li>ជួយសហគមន៍ដែលរងផលប៉ះពាល់</li>
             </ul>
-            <a href="#contact">ស្វែងយល់បន្ថែម <b>→</b></a>
+            <a href="program-details.html#humanitarian-details">ស្វែងយល់បន្ថែម <b>→</b></a>
           </article>
         </div>
       </div>
@@ -286,10 +307,10 @@
               <div><b>អាសយដ្ឋានការិយាល័យ</b><small>Cambodia-Japan Friendship Bridge, Phnom Penh</small></div>
             </div>
             <div class="contact-line"><span>☎</span>
-              <div><b>លេខទូរស័ព្ទ</b><small>[សូមបញ្ចូលលេខទូរស័ព្ទ]</small></div>
+              <div><b>លេខទូរស័ព្ទ</b><small>+885 96 781 2289</small></div>
             </div>
             <div class="contact-line"><span>✉</span>
-              <div><b>អ៊ីមែលផ្លូវការ</b><small>[សូមបញ្ចូលអ៊ីមែល]</small></div>
+              <div><b>អ៊ីមែលផ្លូវការ</b><small>taibak@tcac.org</small></div>
             </div>
             <div class="social-links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Telegram">➤</a><a
                 href="#" aria-label="YouTube">▶</a><a href="#" aria-label="LinkedIn">in</a></div>
@@ -300,8 +321,8 @@
               src="https://maps.google.com/maps?q=11.5877112%2C104.9223955&amp;z=17&amp;output=embed"
               title="Map showing Cambodia-Japan Friendship Bridge, Phnom Penh" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-            <a class="map-link" href="https://maps.app.goo.gl/17vJXfn1KchVkojY6" target="_blank"
-              rel="noopener">បើក Google Maps ↗</a>
+            <a class="map-link" href="https://maps.app.goo.gl/17vJXfn1KchVkojY6" target="_blank" rel="noopener">បើក
+              Google Maps ↗</a>
           </div>
         </div>
       </div>
@@ -314,6 +335,7 @@
         rights reserved.</small>
     </div>
   </footer>
+  <script src="language.js"></script>
   <script src="script.js"></script>
 </body>
 

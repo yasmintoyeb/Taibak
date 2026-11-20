@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ព័ត៌មានលម្អិតអំពីកម្មវិធី និងសកម្មភាពរបស់សមាគមសប្បុរសធម៌តៃប៉ាក កម្ពុជា។">
+  <meta name="theme-color" content="#123f79">
+  <title>ព័ត៌មានលម្អិតកម្មវិធី | TCAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home" aria-label="TCAC home">
+        <img src="assets/tcac-logo.png" alt="និមិត្តសញ្ញាសមាគម TCAC">
+        <span><strong>សមាគមសប្បុរសធម៌តៃប៉ាក​ កម្ពុជា</strong><small>TAIBA CHARITY ASSOCIATION OF CAMBODIA</small></span>
+      </a>
+      <div class="language-picker">
+        <button class="language-toggle" id="languageToggle" type="button" aria-expanded="false"
+          aria-haspopup="true">
+          <img class="language-flag" id="languageFlag" src="assets/flag-kh.svg" alt="" aria-hidden="true">
+          <span id="languageLabel">ខ្មែរ</span>
+          <span class="language-arrow" aria-hidden="true"></span>
+        </button>
+        <div class="language-menu" id="languageMenu" role="menu" aria-label="ជ្រើសរើសភាសា">
+          <button type="button" role="menuitem" data-language="km" lang="km">
+            <img src="assets/flag-kh.svg" alt="" aria-hidden="true"> ខ្មែរ
+          </button>
+          <button type="button" role="menuitem" data-language="en" lang="en">
+            <img src="assets/flag-gb.svg" alt="" aria-hidden="true"> English
+          </button>
+          <button type="button" role="menuitem" data-language="ar" lang="ar">
+            <img src="assets/flag-sa.svg" alt="" aria-hidden="true"> العربية
+          </button>
+        </div>
+      </div>
+      <a class="nav-donate" href="index.html#programs">ត្រឡប់ទៅកម្មវិធី <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section program-details-page">
+      <div class="container program-details">
+        <div class="section-heading centered">
+          <span class="eyebrow">កម្មវិធី និងគម្រោងសកម្មភាព</span>
+          <h1>ព័ត៌មានលម្អិត <em>អំពីកម្មវិធី</em></h1>
+          <p>ស្វែងយល់អំពីគោលដៅ និងសកម្មភាពសំខាន់ៗរបស់យើងក្នុងវិស័យនីមួយៗ។</p>
+        </div>
+        <div class="program-details-grid">
+          <article class="program-detail" id="education-details">
+            <span class="program-no">01 / EDUCATION</span>
+            <h2>វិស័យអប់រំ</h2>
+            <p>គាំទ្រកុមារ និងយុវជនឱ្យមានឱកាសរៀនសូត្រ និងអភិវឌ្ឍចំណេះដឹង។</p>
+            <ul>
+              <li>ផ្តល់សម្ភារៈសិក្សាដើម្បីគាំទ្រការរៀនសូត្រ។</li>
+              <li>ជួយលើកកម្ពស់ឱកាសសិក្សាសម្រាប់កុមារ និងយុវជន។</li>
+            </ul>
+          </article>
+          <article class="program-detail" id="charity-details">
+            <span class="program-no">02 / CHARITY</span>
+            <h2>វិស័យសប្បុរសធម៌</h2>
+            <p>ចែករំលែកធនធាន និងជំនួយដល់បុគ្គល និងគ្រួសារដែលជួបការលំបាក។</p>
+            <ul>
+              <li>ចែករំលែកសម្ភារៈចាំបាច់តាមតម្រូវការ។</li>
+              <li>លើកទឹកចិត្តសហគមន៍ឱ្យចូលរួមក្នុងការជួយគ្នា។</li>
+            </ul>
+          </article>
+          <article class="program-detail" id="social-care-details">
+            <span class="program-no">03 / SOCIAL CARE</span>
+            <h2>វិស័យសង្គមកិច្ច</h2>
+            <p>ចូលរួមលើកកម្ពស់សុខុមាលភាព និងការរស់នៅរបស់ប្រជាជនក្នុងសហគមន៍។</p>
+            <ul>
+              <li>រៀបចំសកម្មភាពដែលជំរុញការចូលរួមក្នុងសហគមន៍។</li>
+              <li>គាំទ្រសុខុមាលភាព និងគ្រួសារក្នុងសហគមន៍។</li>
+            </ul>
+          </article>
+          <article class="program-detail" id="humanitarian-details">
+            <span class="program-no">04 / HUMANITARIAN</span>
+            <h2>វិស័យមនុស្សធម៌</h2>
+            <p>ឆ្លើយតបតាមលទ្ធភាពចំពោះតម្រូវការបន្ទាន់ និងជួយសហគមន៍ដែលរងផលប៉ះពាល់។</p>
+            <ul>
+              <li>ចែករំលែកសម្ភារៈចាំបាច់ដល់អ្នកដែលត្រូវការ។</li>
+              <li>ផ្តល់ជំនួយស្របតាមតម្រូវការរបស់សហគមន៍។</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="footer-brand" href="index.html#home"><img src="assets/tcac-logo.png" alt=""><span><b>TCAC</b><small>TAIBA
+            CHARITY ASSOCIATION OF CAMBODIA</small></span></a>
+      <p>រួមគ្នាដើម្បីសង្គមល្អប្រសើរ។</p>
+    </div>
+  </footer>
+  <div id="googleTranslateWidget" aria-hidden="true"></div>
+  <script src="language.js"></script>
+</body>
+
+</html>

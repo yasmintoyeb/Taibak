@@ -4,7 +4,11 @@ A responsive Khmer-language starter website for Taiba Charity Association of Cam
 
 ## Files
 - `index.html` — website structure and content
+- `program-details.html` — detailed descriptions of the four program areas
+- `account.html` — front-end-only sign-in and sign-up forms
+- `account.js` — account form switching and demo-only validation
 - `style.css` — responsive styling
+- `language.js` — shared language selection and translation persistence
 - `script.js` — mobile navigation and current year
 - `assets/tcac-logo.png` — logo supplied in the chat
 
@@ -20,3 +24,4 @@ Replace all square-bracket placeholders and add verified official information:
 5. Office address, phone, email, social links and a Google Maps embed/link.
 
 The current page intentionally does not invent official contact, financial, governance or project details.
+The account forms are a front-end demo only; they do not authenticate users or send/store form data.

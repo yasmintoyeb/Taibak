@@ -136,6 +136,45 @@ nav a:hover {
     margin-left: 8px
 }
 
+.nav-account-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0
+}
+
+.nav-signin,
+.nav-signup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 12px;
+    border: 1px solid #d5e0ec;
+    border-radius: 7px;
+    color: #123f79;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background .2s, border-color .2s, color .2s
+}
+
+.nav-signin:hover {
+    border-color: #9eb4ce;
+    background: #f5f8fc
+}
+
+.nav-signup {
+    border-color: #123f79;
+    background: #123f79;
+    color: #fff
+}
+
+nav .nav-signup:hover {
+    border-color: #0b2d58;
+    background: #0b2d58;
+    color: #fff
+}
+
 .language-picker {
     position: relative;
     flex-shrink: 0
@@ -403,60 +442,76 @@ body {
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    animation: people-orbit 36s linear infinite
+    animation: people-orbit 40s linear infinite
 }
 
 .orbit-person {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 58px;
-    height: 58px;
-    margin: -29px;
-    overflow: hidden;
-    border: 4px solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 5px 18px #183c6530;
+    width: 100px;
+    margin: -29px 0 0 -50px;
     transform: rotate(var(--person-angle, 0deg)) translateY(-180px)
 }
 
+.orbit-person-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(calc(var(--person-angle, 0deg) * -1));
+    animation: people-counter-orbit 40s linear infinite
+}
+
 .orbit-person:nth-child(2) {
-    --person-angle: 40deg
+    --person-angle: 60deg
+}
+#one {
+    --person-angle: 0deg
 }
 
+#one .orbit-person-content img {
+    border-color: lightgreen;
+}
+#two img {
+    border-color: lightsalmon;
+}
 .orbit-person:nth-child(3) {
-    --person-angle: 80deg
-}
-
-.orbit-person:nth-child(4) {
     --person-angle: 120deg
 }
 
+.orbit-person:nth-child(4) {
+    --person-angle: 180deg
+}
+
 .orbit-person:nth-child(5) {
-    --person-angle: 160deg
-}
-
-.orbit-person:nth-child(6) {
-    --person-angle: 200deg
-}
-
-.orbit-person:nth-child(7) {
     --person-angle: 240deg
 }
 
-.orbit-person:nth-child(8) {
-    --person-angle: 280deg
-}
-
-.orbit-person:nth-child(9) {
-    --person-angle: 320deg
+.orbit-person:nth-child(6) {
+    --person-angle: 300deg
 }
 
 .orbit-person img {
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 58px;
+    height: 58px;
     object-fit: cover;
-    animation: people-counter-orbit 36s linear infinite
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 18px #183c6530
+}
+
+.orbit-person p {
+    margin: 4px 0 0;
+    padding: 1px 8px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 3px 12px #183c6525;
+    color: #123f79;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: nowrap
 }
 
 @keyframes people-orbit {
@@ -466,8 +521,12 @@ body {
 }
 
 @keyframes people-counter-orbit {
+    from {
+        transform: rotate(calc(var(--person-angle, 0deg) * -1))
+    }
+
     to {
-        transform: rotate(-1turn)
+        transform: rotate(calc(var(--person-angle, 0deg) * -1 - 1turn))
     }
 }
 
@@ -523,7 +582,7 @@ body {
 
 @media(prefers-reduced-motion: reduce) {
     .people-orbit,
-    .orbit-person img,
+    .orbit-person-content,
     .hero h1,
     .hero h1 em {
         animation: none
@@ -551,6 +610,170 @@ body {
 .hero-bottom {
     background: #123f79;
     color: white
+}
+
+.account-site-header .nav-wrap {
+    gap: 12px
+}
+
+.account-site-header .brand {
+    min-width: 0;
+    flex: 1
+}
+
+.account-section {
+    min-height: calc(100vh - 86px);
+    display: grid;
+    place-items: center;
+    padding: 48px 22px;
+    background: linear-gradient(135deg, #f4f8fd, #eaf2fb)
+}
+
+.account-card {
+    width: min(460px, 100%);
+    padding: 36px;
+    border: 1px solid #e3ebf4;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 20px 55px #123f7914
+}
+
+.account-back-link {
+    color: #627891;
+    font-size: 12px;
+    font-weight: 600
+}
+
+.account-back-link:hover {
+    color: #123f79
+}
+
+.account-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px
+}
+
+.account-heading {
+    margin: 24px 0 22px
+}
+
+.account-heading h1 {
+    margin: 7px 0 4px;
+    color: #153f73;
+    font-size: 28px;
+    line-height: 1.4
+}
+
+.account-heading p {
+    margin: 0;
+    color: #718196;
+    font-size: 13px
+}
+
+.account-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-bottom: 22px;
+    padding: 5px;
+    border-radius: 9px;
+    background: #f1f5fa
+}
+
+.account-tab {
+    min-height: 40px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #63758a;
+    font: 700 13px Inter, "Busra", sans-serif;
+    cursor: pointer
+}
+
+.account-tab[aria-pressed="true"] {
+    background: #fff;
+    color: #123f79;
+    box-shadow: 0 2px 8px #123f7912
+}
+
+.account-form {
+    display: grid;
+    gap: 16px
+}
+
+.account-form[hidden] {
+    display: none
+}
+
+.form-field {
+    display: grid;
+    gap: 6px
+}
+
+.form-field label {
+    color: #365169;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.form-field input {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid #dce5ef;
+    border-radius: 7px;
+    outline: none;
+    background: #fff;
+    color: #172b45;
+    font: 13px "Busra", "Kantumruy Pro", Inter, sans-serif;
+    transition: border-color .2s, box-shadow .2s
+}
+
+.form-field input::placeholder {
+    color: #a0acba
+}
+
+.form-field input:focus {
+    border-color: #4a78ab;
+    box-shadow: 0 0 0 3px #2463a31a
+}
+
+.account-submit {
+    min-height: 46px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 7px;
+    background: #123f79;
+    color: #fff;
+    font: 700 13px Inter, "Busra", sans-serif;
+    cursor: pointer;
+    transition: background .2s, transform .2s
+}
+
+.account-submit:hover {
+    transform: translateY(-1px);
+    background: #0b2d58
+}
+
+.account-notice {
+    margin: 18px 0 0;
+    padding: 11px 13px;
+    border-left: 3px solid #d3a13e;
+    border-radius: 4px;
+    background: #fff8e9;
+    color: #8b6b2e;
+    font-size: 12px;
+    line-height: 1.7
+}
+
+.account-demo-note {
+    margin: 17px 0 0;
+    color: #8492a2;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center
 }
 
 .bottom-inner {
@@ -582,6 +805,7 @@ body {
 }
 
 .section-heading h2,
+.program-details-page .section-heading h1,
 .trust-grid h2,
 .involve-grid h2 {
     font-size: 36px;
@@ -774,6 +998,56 @@ body {
     line-height: 1.5
 }
 
+.activity-video-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 22px 0 12px
+}
+
+.activity-video-heading h4 {
+    margin: 0;
+    color: #183f70;
+    font-size: 15px
+}
+
+.activity-video-heading span {
+    color: #8492a2;
+    font-size: 11px
+}
+
+.activity-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px
+}
+
+.activity-video-card {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #e8eef5;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 6px 18px #123f790c
+}
+
+.activity-video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #102f55;
+    object-fit: cover
+}
+
+.activity-video-card figcaption {
+    padding: 10px 13px;
+    color: #365169;
+    font-size: 12px;
+    font-weight: 600
+}
+
 .program-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -867,6 +1141,62 @@ body {
 
 .program-card>a b {
     margin-left: 8px
+}
+
+.program-details {
+    margin-top: 72px;
+    scroll-margin-top: 100px
+}
+
+.program-details .section-heading {
+    margin-bottom: 30px
+}
+
+.program-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px
+}
+
+.program-detail {
+    padding: 24px;
+    border: 1px solid #e3ebf4;
+    border-radius: 10px;
+    background: #fff;
+    scroll-margin-top: 100px
+}
+
+.program-detail h2,
+.program-detail h3 {
+    margin: 8px 0;
+    color: #183f70;
+    font-size: 19px
+}
+
+.program-detail p,
+.program-detail ul {
+    color: #718196;
+    font-size: 12px;
+    line-height: 1.9
+}
+
+.program-detail ul {
+    padding-left: 20px;
+    margin: 12px 0 16px
+}
+
+.program-detail li::marker {
+    color: #c18c28
+}
+
+.program-detail>a {
+    color: #28609a;
+    font-size: 11px;
+    font-weight: 700
+}
+
+.program-detail>a b {
+    margin-left: 6px
 }
 
 .trust-section {
@@ -1229,8 +1559,8 @@ footer {
 
 @media(max-width:980px) {
     nav {
-        gap: 13px;
-        font-size: 11px
+        gap: 9px;
+        font-size: 10px
     }
 
     .brand {
@@ -1243,6 +1573,16 @@ footer {
 
     .brand small {
         font-size: 7px
+    }
+
+    .nav-account-actions {
+        gap: 5px
+    }
+
+    .nav-signin,
+    .nav-signup {
+        padding: 8px 9px;
+        font-size: 10px
     }
 
     .hero-grid {
@@ -1270,6 +1610,19 @@ footer {
     .brand img {
         width: 48px;
         height: 48px
+    }
+
+    .account-site-header .brand {
+        min-width: 0
+    }
+
+    .account-section {
+        min-height: calc(100vh - 72px);
+        padding: 35px 15px
+    }
+
+    .account-card {
+        padding: 28px 22px
     }
 
     .menu-toggle {
@@ -1315,6 +1668,30 @@ footer {
         border-bottom: 1px solid #f0f3f7
     }
 
+    nav .nav-account-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 12px
+    }
+
+    nav .nav-signin,
+    nav .nav-signup {
+        min-height: 42px;
+        padding: 9px 12px;
+        border: 1px solid #d5e0ec;
+        border-radius: 7px;
+        text-align: center
+    }
+
+    nav .nav-signup {
+        border-color: #123f79
+    }
+
+    .account-heading h1 {
+        font-size: 25px
+    }
+
     .nav-donate {
         margin-top: 10px;
         text-align: center
@@ -1353,10 +1730,21 @@ footer {
     }
 
     .orbit-person {
+        width: 100px;
+        margin: -24px 0 0 -50px
+    }
+
+    .orbit-person img {
         width: 48px;
         height: 48px;
-        margin: -24px;
-        border-width: 3px;
+        border-width: 3px
+    }
+
+    .orbit-person p {
+        font-size: 10px
+    }
+
+    .orbit-person {
         transform: rotate(var(--person-angle, 0deg)) translateY(-130px)
     }
 
@@ -1370,7 +1758,7 @@ footer {
     }
 
     .people-orbit,
-    .orbit-person img {
+    .orbit-person-content {
         animation-duration: 48s
     }
 
@@ -1385,6 +1773,7 @@ footer {
     }
 
     .section-heading h2,
+    .program-details-page .section-heading h1,
     .trust-grid h2,
     .involve-grid h2 {
         font-size: 29px
@@ -1415,6 +1804,14 @@ footer {
         gap: 12px
     }
 
+    .program-details {
+        margin-top: 52px
+    }
+
+    .program-details-grid {
+        grid-template-columns: 1fr
+    }
+
     .activity-gallery {
         padding: 12px
     }
@@ -1426,6 +1823,10 @@ footer {
 
     .activity-gallery-grid figure {
         height: 135px
+    }
+
+    .activity-video-grid {
+        gap: 10px
     }
 
     .program-card {
@@ -1487,6 +1888,15 @@ footer {
         font-size: 6px
     }
 
+    .account-site-header .brand small {
+        display: none
+    }
+
+    .account-site-header .nav-donate {
+        padding: 8px 10px;
+        font-size: 11px
+    }
+
     .hero h1 {
         font-size: 34px
     }
@@ -1504,6 +1914,10 @@ footer {
     }
 
     .program-grid {
+        grid-template-columns: 1fr
+    }
+
+    .activity-video-grid {
         grid-template-columns: 1fr
     }
 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ចូលប្រើប្រាស់ ឬបង្កើតគណនីសម្រាប់សមាគមសប្បុរសធម៌តៃប៉ាក កម្ពុជា។">
+  <meta name="theme-color" content="#123f79">
+  <title>Sign in / Sign up | TCAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header account-site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home" aria-label="TCAC home">
+        <img src="assets/tcac-logo.png" alt="និមិត្តសញ្ញាសមាគម TCAC">
+        <span><strong>សមាគមសប្បុរសធម៌តៃប៉ាក​ កម្ពុជា</strong><small>TAIBA CHARITY ASSOCIATION OF CAMBODIA</small></span>
+      </a>
+      <a class="nav-donate" href="index.html#home">ត្រឡប់ទៅទំព័រដើម <span>↗</span></a>
+    </div>
+  </header>
+
+  <main class="account-section">
+    <section class="account-card" aria-labelledby="account-heading">
+      <div class="account-toolbar">
+        <a class="account-back-link" href="index.html#home">← ត្រឡប់ទៅទំព័រដើម</a>
+        <div class="language-picker">
+          <button class="language-toggle" id="languageToggle" type="button" aria-expanded="false"
+            aria-haspopup="true">
+            <img class="language-flag" id="languageFlag" src="assets/flag-kh.svg" alt="" aria-hidden="true">
+            <span id="languageLabel">ខ្មែរ</span>
+            <span class="language-arrow" aria-hidden="true"></span>
+          </button>
+          <div class="language-menu" id="languageMenu" role="menu" aria-label="ជ្រើសរើសភាសា">
+            <button type="button" role="menuitem" data-language="km" lang="km">
+              <img src="assets/flag-kh.svg" alt="" aria-hidden="true"> ខ្មែរ
+            </button>
+            <button type="button" role="menuitem" data-language="en" lang="en">
+              <img src="assets/flag-gb.svg" alt="" aria-hidden="true"> English
+            </button>
+            <button type="button" role="menuitem" data-language="ar" lang="ar">
+              <img src="assets/flag-sa.svg" alt="" aria-hidden="true"> العربية
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="account-heading">
+        <span class="eyebrow">សូមស្វាគមន៍មកកាន់ TCAC</span>
+        <h1 id="account-heading">គណនីរបស់អ្នក</h1>
+        <p>ចូលគណនី ឬបង្កើតគណនីថ្មី។</p>
+      </div>
+
+      <div class="account-tabs" role="tablist" aria-label="ជ្រើសរើសទម្រង់គណនី">
+        <button class="account-tab" id="signin-tab" type="button" aria-controls="signin"
+          data-account-tab="signin">Sign in</button>
+        <button class="account-tab" id="signup-tab" type="button" aria-controls="signup"
+          data-account-tab="signup">Sign up</button>
+      </div>
+
+      <form class="account-form" id="signin" aria-labelledby="signin-tab">
+        <div class="form-field">
+          <label for="signin-email">អ៊ីមែល</label>
+          <input id="signin-email" name="email" type="email" autocomplete="email" placeholder="name@example.com"
+            required>
+        </div>
+        <div class="form-field">
+          <label for="signin-password">ពាក្យសម្ងាត់</label>
+          <input id="signin-password" name="password" type="password" autocomplete="current-password"
+            placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+        </div>
+        <button class="account-submit" type="button" data-account-submit="signin">Sign in</button>
+      </form>
+
+      <form class="account-form" id="signup" aria-labelledby="signup-tab">
+        <div class="form-field">
+          <label for="signup-name">ឈ្មោះពេញ</label>
+          <input id="signup-name" name="name" type="text" autocomplete="name" placeholder="បញ្ចូលឈ្មោះពេញ"
+            required>
+        </div>
+        <div class="form-field">
+          <label for="signup-email">អ៊ីមែល</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="name@example.com"
+            required>
+        </div>
+        <div class="form-field">
+          <label for="signup-password">ពាក្យសម្ងាត់</label>
+          <input id="signup-password" name="password" type="password" autocomplete="new-password"
+            placeholder="យ៉ាងតិច ៨ តួអក្សរ" minlength="8" required>
+        </div>
+        <div class="form-field">
+          <label for="signup-confirm-password">បញ្ជាក់ពាក្យសម្ងាត់</label>
+          <input id="signup-confirm-password" name="confirm-password" type="password" autocomplete="new-password"
+            placeholder="បញ្ចូលពាក្យសម្ងាត់ម្តងទៀត" minlength="8" required>
+        </div>
+        <button class="account-submit" type="button" data-account-submit="signup">Sign up</button>
+      </form>
+
+      <p class="account-notice" id="accountNotice" role="status" aria-live="polite" hidden>
+        ប្រព័ន្ធគណនីមិនទាន់បានភ្ជាប់ទេ។ ព័ត៌មានរបស់អ្នកមិនត្រូវបានផ្ញើ ឬរក្សាទុកឡើយ។
+      </p>
+      <p class="account-demo-note">ទម្រង់នេះសម្រាប់បង្ហាញមុខងារប៉ុណ្ណោះ មិនទាន់អាចចូល ឬបង្កើតគណនីពិតបានទេ។</p>
+    </section>
+    <div id="googleTranslateWidget" aria-hidden="true"></div>
+  </main>
+
+  <script src="language.js"></script>
+  <script src="account.js"></script>
+</body>
+
+</html>
