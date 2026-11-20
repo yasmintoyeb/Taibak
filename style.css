@@ -2,6 +2,38 @@
     box-sizing: border-box
 }
 
+@font-face {
+    font-family: "Busra";
+    src: url("assets/fonts/Busra-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Busra";
+    src: url("assets/fonts/Busra-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Busra";
+    src: url("assets/fonts/Busra-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Busra";
+    src: url("assets/fonts/Busra-Bold.woff2") format("woff2");
+    font-weight: 700 900;
+    font-style: normal;
+    font-display: swap
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px
@@ -9,7 +41,7 @@ html {
 
 body {
     margin: 0;
-    font-family: "Kantumruy Pro", Inter, sans-serif;
+    font-family: "Busra", "Kantumruy Pro", Inter, sans-serif;
     color: #172b45;
     background: #fff;
     line-height: 1.75
@@ -119,7 +151,7 @@ nav a:hover {
     border-radius: 7px;
     background: #fff;
     color: #123f79;
-    font: 700 12px "Kantumruy Pro", Inter, sans-serif;
+    font: 700 12px "Busra", "Kantumruy Pro", Inter, sans-serif;
     cursor: pointer
 }
 
@@ -168,7 +200,7 @@ nav a:hover {
     color: #365169;
     padding: 8px 10px;
     text-align: start;
-    font: 600 13px "Kantumruy Pro", Inter, sans-serif;
+    font: 600 13px "Busra", "Kantumruy Pro", Inter, sans-serif;
     cursor: pointer
 }
 
@@ -389,19 +421,35 @@ body {
 }
 
 .orbit-person:nth-child(2) {
-    --person-angle: 72deg
+    --person-angle: 40deg
 }
 
 .orbit-person:nth-child(3) {
-    --person-angle: 144deg
+    --person-angle: 80deg
 }
 
 .orbit-person:nth-child(4) {
-    --person-angle: 216deg
+    --person-angle: 120deg
 }
 
 .orbit-person:nth-child(5) {
-    --person-angle: 288deg
+    --person-angle: 160deg
+}
+
+.orbit-person:nth-child(6) {
+    --person-angle: 200deg
+}
+
+.orbit-person:nth-child(7) {
+    --person-angle: 240deg
+}
+
+.orbit-person:nth-child(8) {
+    --person-angle: 280deg
+}
+
+.orbit-person:nth-child(9) {
+    --person-angle: 320deg
 }
 
 .orbit-person img {
@@ -475,7 +523,9 @@ body {
 
 @media(prefers-reduced-motion: reduce) {
     .people-orbit,
-    .orbit-person img {
+    .orbit-person img,
+    .hero h1,
+    .hero h1 em {
         animation: none
     }
 }
