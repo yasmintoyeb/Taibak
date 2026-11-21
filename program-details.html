@@ -22,26 +22,29 @@
         <img src="assets/tcac-logo.png" alt="និមិត្តសញ្ញាសមាគម TCAC">
         <span><strong>សមាគមសប្បុរសធម៌តៃប៉ាក​ កម្ពុជា</strong><small>TAIBA CHARITY ASSOCIATION OF CAMBODIA</small></span>
       </a>
-      <div class="language-picker">
-        <button class="language-toggle" id="languageToggle" type="button" aria-expanded="false"
-          aria-haspopup="true">
-          <img class="language-flag" id="languageFlag" src="assets/flag-kh.svg" alt="" aria-hidden="true">
-          <span id="languageLabel">ខ្មែរ</span>
-          <span class="language-arrow" aria-hidden="true"></span>
-        </button>
-        <div class="language-menu" id="languageMenu" role="menu" aria-label="ជ្រើសរើសភាសា">
-          <button type="button" role="menuitem" data-language="km" lang="km">
-            <img src="assets/flag-kh.svg" alt="" aria-hidden="true"> ខ្មែរ
+      <button class="menu-toggle" id="menuToggle" aria-label="បើកម៉ឺនុយ" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <div class="language-picker">
+          <button class="language-toggle" id="languageToggle" type="button" aria-expanded="false"
+            aria-haspopup="true">
+            <img class="language-flag" id="languageFlag" src="assets/flag-kh.svg" alt="" aria-hidden="true">
+            <span id="languageLabel">ខ្មែរ</span>
+            <span class="language-arrow" aria-hidden="true"></span>
           </button>
-          <button type="button" role="menuitem" data-language="en" lang="en">
-            <img src="assets/flag-gb.svg" alt="" aria-hidden="true"> English
-          </button>
-          <button type="button" role="menuitem" data-language="ar" lang="ar">
-            <img src="assets/flag-sa.svg" alt="" aria-hidden="true"> العربية
-          </button>
+          <div class="language-menu" id="languageMenu" role="menu" aria-label="ជ្រើសរើសភាសា">
+            <button type="button" role="menuitem" data-language="km" lang="km">
+              <img src="assets/flag-kh.svg" alt="" aria-hidden="true"> ខ្មែរ
+            </button>
+            <button type="button" role="menuitem" data-language="en" lang="en">
+              <img src="assets/flag-gb.svg" alt="" aria-hidden="true"> English
+            </button>
+            <button type="button" role="menuitem" data-language="ar" lang="ar">
+              <img src="assets/flag-sa.svg" alt="" aria-hidden="true"> العربية
+            </button>
+          </div>
         </div>
-      </div>
-      <a class="nav-donate" href="index.html#programs">ត្រឡប់ទៅកម្មវិធី <span>↗</span></a>
+        <a class="nav-donate" href="index.html#programs">ត្រឡប់ទៅកម្មវិធី <span>↗</span></a>
+      </nav>
     </div>
   </header>
 
@@ -104,6 +107,7 @@
   </footer>
   <div id="googleTranslateWidget" aria-hidden="true"></div>
   <script src="language.js"></script>
+  <script src="program-details.js"></script>
 </body>
 
 </html>

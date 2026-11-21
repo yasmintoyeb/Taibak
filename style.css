@@ -1048,6 +1048,7 @@ body {
     font-weight: 600
 }
 
+
 .program-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1260,7 +1261,8 @@ body {
     align-items: center;
     gap: 14px;
     padding: 17px 0;
-    border-bottom: 1px solid #edf1f5
+    border-bottom: 1px solid #edf1f5;
+    text-decoration: none
 }
 
 .report-item:last-child {
@@ -1291,11 +1293,18 @@ body {
 }
 
 .coming {
+    font-weight: bold;
     font-size: 9px;
-    color: #a5aeb8;
-    background: #f3f5f7;
+    color: white;
+    background: rgb(193, 140, 40);
     padding: 5px 8px;
-    border-radius: 4px
+    border-radius: 4px;
+    transition: background-color .25s ease, color .25s ease, transform .25s ease
+}
+
+.report-item:hover .coming {
+    background: #076d3b;
+    transform: translateY(-2px)
 }
 
 .involve-grid {
